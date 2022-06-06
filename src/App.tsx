@@ -1,38 +1,30 @@
-import * as React from "react"
+import React, {Suspense, lazy} from "react"
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
+  Heading,
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+// import { ColorModeSwitcher } from "./ColorModeSwitcher"
+import { Routes, Route } from "react-router-dom";
+import "@fontsource/dm-sans";
+import theme from "./components/common/extendTheme";
+import Loading from "./components/common/Loading";
+const Layout = lazy(() => import("./components/common/Layout"));
+const Home = lazy(() => import("./page/Home"));
+const About = lazy(() => import("./page/About"));
+const Contact = lazy(() => import("./page/Contact"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
+    <Suspense  fallback={ <Loading />}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={ <Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </Suspense>
   </ChakraProvider>
 )
