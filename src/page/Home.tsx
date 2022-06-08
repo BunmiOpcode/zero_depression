@@ -1,11 +1,18 @@
 import React from "react";
+import Header from "../components/HomeComponents/Header";
+import Benefits from "../components/HomeComponents/Benefits";
+import Support from "../components/HomeComponents/Support";
+import Blog from "../components/HomeComponents/Blog";
+import Testimonials from "../components/HomeComponents/Testimonials";
 
-type Props = {}
-
-const Home = (props: Props) => {
-  return (
-    <div>Home</div>
-  )
-}
+const Home = () => (
+  <>
+    <Header />
+    <Benefits />
+    <Blog />
+    <Support />
+    <Testimonials />
+  </>
+);
 
 export default Home;

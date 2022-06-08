@@ -8,6 +8,7 @@ const theme = extendTheme({
     },
     fonts: {
         body: `"DM Sans", sans-serif`,
+        heading:`"DM Sans", sans-serif`,
     }
 
 })
