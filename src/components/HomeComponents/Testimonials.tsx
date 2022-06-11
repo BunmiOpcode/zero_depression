@@ -89,9 +89,10 @@ const Testimonials = () => {
                   outline: "none",
                 }}
                 _focus={{ outline: "none" }}
+                px={[1, 1, 4]}
               >
-                <Flex align="center" justify="space-between">
-                  <Avatar src={test.pics} size="lg" name={test.name} mr={4} />
+                <Flex align="center" justify="space-between" direction={["column", "column", "row"]}>
+                  <Avatar src={test.pics} size={["md", "md", "lg"]} name={test.name} mr={[2, 2, 4]} />
                   <VStack>
                     <Text fontSize="md" fontWeight="600" color="accent" my={0}>
                       {test.name}

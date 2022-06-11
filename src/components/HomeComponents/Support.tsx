@@ -20,11 +20,11 @@ const Support = () => {
   return (
     <Box
       position="relative"
-      left={["0", "0", "20%"]}
+      left="20%"
       w="80%"
       pt={10}
-      borderLeftRadius="112px"
-      borderBottomLeftRadius="112px"
+      borderLeftRadius={["90px", "90px", "112px"]}
+      borderBottomLeftRadius={["90px", "90px", "112px"]}
       bgColor="#FFA50070"
       my={24}
     >
@@ -35,9 +35,9 @@ const Support = () => {
         justify="space-between"
       >
         <Box
-          textAlign={["center", "center", "left"]}
-          w="50%"
-          ml={["auto", "auto", "3%", "8%"]}
+          textAlign="left"
+          w={["85%", "85%", "50%"]}
+          ml={["1%", "1%", "3%", "8%"]}
         >
           <Text color="pryClr" fontWeight="700" fontSize={["sm", "sm", "md"]}>
             We Need Your Support
@@ -70,7 +70,7 @@ const Support = () => {
           >
             Support By
           </Heading>
-          <List mt={3} spacing={3} fontWeight="700">
+          <List mt={3} spacing={3} fontWeight="700" fontSize={["sm", "sm", "md"]}>
             <ListItem>
               <ListIcon as={MdCheckCircle} color="#0BDD2D" />
               Becoming a counsellor
@@ -114,7 +114,7 @@ const Support = () => {
             Send Us A Message
           </Button>
         </Box>
-        <Box w={["100%", "100%", "30%"]} h={["100%", "100%", "90%"]} mt={10}>
+        <Box w={["70%", "70%", "30%"]} h={["50%", "50%", "90%"]} mt={10}>
           <Image src={fone} fit="cover" />
         </Box>
       </Flex>

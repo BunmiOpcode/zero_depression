@@ -9,16 +9,16 @@ const Blog = () => {
     <Box
       w="80%"
       py={10}
-      borderRightRadius="112px"
-      borderBottomRightRadius="112px"
+      borderRightRadius={["90px", "90px", "112px"]}
+      borderBottomRightRadius={["90px", "90px", "112px"]}
       bgColor="#FFA50070"
       my={8}
     >
       <Flex direction={["column", "column", "row"]} ml={["auto", "auto", "3%", "8%"]} align="center" justify="space-between">
-        <Box w={["100%", "100%", "40%"]} h="100%">
+        <Box w={["80%", "80%", "40%"]} h="100%" order={[1, 1, 0]}>
           <Image src={blogImg} fit="contain" />
         </Box>
-        <Box textAlign={["center", "center", "left"]} w="50%">
+        <Box textAlign="left" w={["75%", "75%", "50%"]} mt={[4, 4, 0]}>
           <Text color="pryClr" fontWeight="700" fontSize={["sm", "sm", "md"]}>
             Looking for inspiring posts
           </Text>

@@ -1,0 +1,31 @@
+.slick-slider {
+  overflow-y: hidden;
+}
+
+.slick-dots {
+  bottom: -7px;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 8px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  content: "•";
+  text-align: center;
+  opacity: 1;
+  color: #ffa500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .slick-slide div {
+    height: fit-content;
+} */
+/* .slick-active {
+    color: #FFA500
+} */

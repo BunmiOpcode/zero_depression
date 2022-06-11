@@ -5,7 +5,7 @@ const NotFound = () => {
   const navigate = useNavigate();
   return (
     <Box display="flex" alignItems="center" justifyContent="space-between" flexDirection="column">
-      <Heading color="accent" mb={2}>404 Not Found</Heading>
+      <Heading color="accent" mb={2}  mt={32}>404 Not Found</Heading>
       <Box>
         <Button
           color="pryClr"

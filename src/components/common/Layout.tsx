@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Nav from "./Nav";
+import Footer from "./Footer";
 // import SpacedContainer from "./SpacedContainer";
 
 const Layout = () => {
@@ -11,6 +12,7 @@ const Layout = () => {
         <Nav />
       </Box>
       <Outlet />
+      <Footer />
     </Box>
   );
 };

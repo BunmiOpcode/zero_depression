@@ -1,0 +1,70 @@
+/* .share-container{
+    background-image: url("../../../assets/shareArrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.share-logos::after{
+    content: "";
+    background-image: url("../../../assets/botPat.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: -60px;
+    left: 15px;
+    width: 100px;
+    height: 50px;
+
+}
+.share-logos::before{
+    content: "";
+    background-image: url("../../../assets/topPat.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: -60px;
+    left: 15px;
+    width: 100px;
+    height: 50px;
+
+} */
+
+@media screen and (min-width: 768px) {
+    .share-container{
+    background-image: url("../../../assets/shareArrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.share-logos::after{
+    content: "";
+    background-image: url("../../../assets/botPat.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: -60px;
+    left: 15px;
+    width: 100px;
+    height: 50px;
+
+}
+.share-logos::before{
+    content: "";
+    background-image: url("../../../assets/topPat.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: -60px;
+    left: 15px;
+    width: 100px;
+    height: 50px;
+
+}
+    
+}

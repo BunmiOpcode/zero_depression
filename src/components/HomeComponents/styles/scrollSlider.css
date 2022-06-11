@@ -1,0 +1,23 @@
+.scroll-slider {
+    position: absolute;
+    left: 90%;
+    bottom: 0;
+    animation-name: marquee;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes  marquee {
+    from {
+        left: 90%
+    }
+
+    to{
+        left: -100%
+    }
+    
+}
