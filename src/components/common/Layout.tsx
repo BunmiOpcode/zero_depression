@@ -11,7 +11,9 @@ const Layout = () => {
       <Box position="fixed" bgColor="white" w="100%" zIndex="5">
         <Nav />
       </Box>
+      <Box pt="20">
       <Outlet />
+      </Box>
       <Footer />
     </Box>
   );

@@ -23,6 +23,7 @@ const TalkButton = ({ path, bgColor, color, size }: Props) => {
             py={2}
             px={4}
             w={size}
+            // mx={["auto", "auto", "0"]}
             _focus={{ bgColor: "transparent" }}
             _hover={{ bgColor: "transparent", color: "pryClr" }}
             onClick={() => navigate(path)}

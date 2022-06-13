@@ -14,8 +14,8 @@ const settings = {
   dots: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 2,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
   // adaptiveHeight: true,
@@ -49,15 +49,15 @@ const settings = {
 };
 const Counsellors = () => {
   const allCounsellors = getAllCounsellors();
-  const slider = useRef<any>();
+  // const slider = useRef<any>();
   const navigate = useNavigate();
 
-  const next = () => {
-    slider.current.slickNext();
-  };
-  const previous = () => {
-    slider.current.slickPrev();
-  };
+  // const next = () => {
+  //   slider.current.slickNext();
+  // };
+  // const previous = () => {
+  //   slider.current.slickPrev();
+  // };
 
   return (
     <Box mt={10} bgColor="#F8FAFC" pt={12} pb={4}>
@@ -69,7 +69,9 @@ const Counsellors = () => {
           Meet Our Amazing Counsellors
         </Heading>
         <Box overflowX="hidden" w={["100%", "100%", "85%"]} mx="auto">
-          <Slider ref={(c) => (slider.current = c)} {...settings}>
+          <Slider 
+          // ref={(c) => (slider.current = c)}
+           {...settings}>
             {allCounsellors.map((c: ICounsellor) => (
               <CounsellorCard
                 img={c.img}

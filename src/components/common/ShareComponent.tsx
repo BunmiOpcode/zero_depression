@@ -16,6 +16,7 @@ const ShareComponent = () => {
         height="200px"
         className="share-container"
         py={4}
+        px={[2, 2, 0]}
         my={8}
       >
         <Text
@@ -23,6 +24,7 @@ const ShareComponent = () => {
           color="white"
           fontSize={["xl", "xl", "2xl"]}
           fontWeight={700}
+          textAlign={["center", "center", "left"]}
         >
           Share ZeroDepression With Your Friends And Family
         </Text>

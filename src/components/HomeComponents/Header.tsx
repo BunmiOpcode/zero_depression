@@ -10,13 +10,13 @@ const Header = () => {
         <Flex
           direction={["column", "column", "row"]}
           w="100%"
-          py={[4, 4, 24]}
+          // py={[4, 4, 24]}
           justify="space-between"
           align="center"
           bgColor="#F6F8FB"
         >
           <Box mb={[4, 4, 0]} w={["100%", "100%", "40%"]}>
-            <Heading color="pryClr" fontSize={["3xl", "3xl", "6xl"]}>
+            <Heading color="pryClr" fontSize={["4xl", "4xl", "7xl"]}>
               Zero
               <span style={{ color: "#0F2137", display: "block" }}>
                 Depression
@@ -37,7 +37,8 @@ const Header = () => {
               path="/talk"
               color="white"
               bgColor="pryClr"
-              size={["100%", "100%", "40%"]}
+              size={["60%", "60%", "40%"]}
+              
             />
           </Box>
           <Box h={["100%", "100%", "50%"]} w={["100%", "100%", "50%", "40%"]} mt={[2, 2, 10]}>

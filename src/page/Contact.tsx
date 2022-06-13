@@ -1,10 +1,12 @@
 import React from "react";
-
-type Props = {}
-
-const Contact = (props: Props) => {
+import ShareComponent from "../components/common/ShareComponent";
+import Landing from "../components/Contact/Landing"
+const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+    <Landing />
+    <ShareComponent />
+    </>
   )
 }
 
