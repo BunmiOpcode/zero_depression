@@ -58,7 +58,7 @@ const Nav = () => {
                 };
               }}
             >
-              About
+              About Us
             </NavLink>
             <NavLink
               to="/contact"
@@ -73,7 +73,22 @@ const Nav = () => {
                 };
               }}
             >
-              Contact
+              Contact Us
+            </NavLink>
+            <NavLink
+              to="/blog"
+              style={({ isActive }) => {
+                return {
+                  display: "block",
+                  fontSize: "sm",
+                  color: isActive ? "#FFA500" : "#0F2137",
+                  fontWeight: isActive ? 600 : 400,
+                  paddingBottom: isActive ? "2px" : "none",
+                  borderBottom: isActive ? "2px solid #FFA500" : "none",
+                };
+              }}
+            >
+              Blog
             </NavLink>
           </Flex>
           <Box display={["none", "none", "flex"]}>
@@ -123,7 +138,7 @@ const Nav = () => {
                 };
               }}
             >
-              About
+              About Us
             </NavLink>
             <NavLink
               to="/contact"
@@ -141,7 +156,25 @@ const Nav = () => {
                 };
               }}
             >
-              Contact
+              Contact Us
+            </NavLink>
+            <NavLink
+              to="/blog"
+              onClick={onClose}
+              style={({ isActive }) => {
+                return {
+                  display: "block",
+                  fontSize: "sm",
+                  color: isActive ? "#FFA500" : "#0F2137",
+                  fontWeight: isActive ? 600 : 400,
+                  paddingBottom: isActive ? "2px" : "none",
+                  borderBottom: isActive ? "2px solid #FFA500" : "none",
+                  textAlign: "center",
+                  marginBottom: "10px",
+                };
+              }}
+            >
+              Blog
             </NavLink>
             <Box mt={4}>
               <TalkButton path="/talk" />

@@ -1,0 +1,43 @@
+
+.left-img{
+    background-image: url("../../../assets/about/aboutImg2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    height: 200px;
+    width: 100%;
+}
+
+.right-img {
+     background-image: url("../../../assets/about/aboutImg1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    height: 200px;
+    width: 100%;
+    order: 1;
+}
+
+@media screen and (min-width:768px) {
+    
+.left-img{
+    background-image: url("../../../assets/about/aboutImg2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 500px;
+    width: 100%;
+    transform: translateY(-159px);
+}
+
+.right-img {
+     background-image: url("../../../assets/about/aboutImg1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 500px;
+    width: 100%;
+    transform: translate(132px, -305px);
+      order: 0;
+}
+}
