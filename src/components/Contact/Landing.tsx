@@ -265,8 +265,8 @@ const Landing = () => {
               </Box>
             </Flex>
           </Box>
-          <TeamsCarousel />
         </SpacedContainer>
+        <TeamsCarousel />
       </Box>
       <SpacedContainer>
         <Box mt={10}>
