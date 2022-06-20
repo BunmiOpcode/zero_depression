@@ -19,7 +19,7 @@ const Home = () => (
     <Counsellors />
     <Supporters />
     <SubscriptionForm />
-    <ShareComponent />
+    <ShareComponent iconsIsVisible={true} buttonIsVisible={false} />
   </>
 );
 

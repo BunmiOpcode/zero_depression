@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
     <Landing />
-    <ShareComponent />
+    <ShareComponent iconsIsVisible={false} buttonIsVisible={true} />
     </>
   )
 }

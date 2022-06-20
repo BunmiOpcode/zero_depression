@@ -1,10 +1,15 @@
-import React from "react";
-import { Flex, HStack, Text, IconButton } from "@chakra-ui/react";
+import { Flex, HStack, Text, Link, Box } from "@chakra-ui/react";
 import { FaTwitter, FaWhatsapp, FaFacebookMessenger } from "react-icons/fa";
 import SpacedContainer from "./SpacedContainer";
-import "./styles/share.css"
+import "./styles/share.css";
+import TalkButton from "./TalkButton";
 
-const ShareComponent = () => {
+type Props = {
+  buttonIsVisible?: boolean;
+  iconsIsVisible?: boolean;
+};
+
+const ShareComponent = ({ buttonIsVisible, iconsIsVisible }: Props) => {
   return (
     <SpacedContainer>
       <Flex
@@ -26,62 +31,83 @@ const ShareComponent = () => {
           fontWeight={700}
           textAlign={["center", "center", "left"]}
         >
-          Share ZeroDepression With Your Friends And Family
+          {buttonIsVisible
+            ? "Connect with the most compassionate councillors for free"
+            : " Share ZeroDepression With Your Friends And Family"}
         </Text>
-        <HStack 
-        className="share-logos" 
-        position="relative"
-         w={["100%, 100%", "15%"]}
-        >
-          <IconButton
-            aria-label="twitter-share-button"
-            bgColor="transparent"
-            fontSize="40px"
-            _hover={{
-              bgColor: "transparent",
-            }}
-            _active={{
-              bgColor: "transparent",
-            }}
-            _focus={{
-              bgColor: "transparent",
-            }}
-            icon={<FaTwitter color="#55ACEE" />}
+        {iconsIsVisible && (
+          <HStack
+            className="share-logos"
+            position="relative"
+            w={["100%, 100%", "15%"]}
+          >
+            <Link
+            href="https://twitter.com"
+              textDecoration="none"
+              fontSize="30px"
+              _hover={{
+                textDecoration: "none"
+              }}
+              _active={{
+                textDecoration: "none",
+              }}
+              _focus={{
+                textDecoration: "none",
+              }}
+            >
+              <FaTwitter color="#55ACEE" />
+            </Link>
+            <Link
+               href="https://facebook.com"
+              textDecoration="none"
+              _hover={{
+                textDecoration: "none"
+              }}
+              fontSize="30px"
+              _active={{
+                textDecoration: "none",
+              }}
+              _focus={{
+                textDecoration: "none",
+              }}
+            >
+              <FaFacebookMessenger color="#1542DF" />
+            </Link>
+            <Link
+               href="https://whatsapp.com"
+              textDecoration="none"
+              _hover={{
+                textDecoration: "none"
+              }}
+              fontSize="30px"
+              _active={{
+                textDecoration: "none",
+              }}
+              _focus={{
+                textDecoration: "none",
+              }}
+             
+            >
+              <FaWhatsapp color="#00E676" />
+            </Link>
+          </HStack>
+        )}
+
+        {buttonIsVisible && (
+          <TalkButton
+            path="/talk"
+            bgColor="white"
+            size={["100%", "100%", "20%"]}
           />
-          <IconButton
-            aria-label="facebook-share-button"
-            bgColor="transparent"
-            fontSize="40px"
-            _hover={{
-              bgColor: "transparent",
-            }}
-            _active={{
-              bgColor: "transparent",
-            }}
-            _focus={{
-              bgColor: "transparent",
-            }}
-            icon={<FaFacebookMessenger color="#1542DF" />}
-          />
-          <IconButton
-            aria-label="twitter-share-button"
-            bgColor="transparent"
-            fontSize="40px"
-            _hover={{
-              bgColor: "transparent",
-            }}
-            _active={{
-              bgColor: "transparent",
-            }}
-            _focus={{
-              bgColor: "transparent",
-            }}
-            icon={<FaWhatsapp color="#00E676" />}
-          />
-        </HStack>
+        )}
       </Flex>
     </SpacedContainer>
   );
+};
+
+ShareComponent.defaultProp = {
+  buttonIsVisible: false,
+  iconsIsVisible: true,
 };
 
 export default ShareComponent;

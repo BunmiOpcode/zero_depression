@@ -35,7 +35,7 @@ const About = () => {
         </Box>
         <Supporters />
       </SpacedContainer>
-      <ShareComponent />
+      <ShareComponent buttonIsVisible={true} iconsIsVisible={false} />
     </>
   );
 };

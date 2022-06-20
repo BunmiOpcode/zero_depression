@@ -20,12 +20,12 @@ const TalkButton = ({ path, bgColor, color, size }: Props) => {
             fontWeight={400}
             fontSize="sm"
             bgColor= {bgColor}
-            py={2}
+            py={4}
             px={4}
             w={size}
             // mx={["auto", "auto", "0"]}
-            _focus={{ bgColor: "transparent" }}
-            _hover={{ bgColor: "transparent", color: "pryClr" }}
+            _focus={{ bgColor }}
+            _hover={{ bgColor, color }}
             onClick={() => navigate(path)}
           >
             Talk with a Councillor
