@@ -97,7 +97,7 @@ const ShareComponent = ({ buttonIsVisible, iconsIsVisible }: Props) => {
           <TalkButton
             path="/talk"
             bgColor="white"
-            size={["100%", "100%", "20%"]}
+            size={["60%", "60%", "20%"]}
           />
         )}
       </Flex>
