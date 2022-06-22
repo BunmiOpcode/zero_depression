@@ -94,11 +94,19 @@ const ShareComponent = ({ buttonIsVisible, iconsIsVisible }: Props) => {
         )}
 
         {buttonIsVisible && (
-          <TalkButton
-            path="/talk"
-            bgColor="white"
-            size={["60%", "60%", "20%"]}
-          />
+          <Box className="share-logos" 
+          w={["100%, 100%", "15%"]} 
+          display="flex" 
+          alignItems="center" 
+          justify-Content="center" 
+          position="relative">
+            <TalkButton
+              path="/talk"
+              bgColor="white"
+              size="95%"
+            />
+
+          </Box>
         )}
       </Flex>
     </SpacedContainer>

@@ -1,0 +1,11 @@
+.angle::after{
+    position: absolute;
+    content: "";
+    top: -12px;
+    left: 2px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 20px solid rgba(255, 165, 0, 1);
+    border-top: 20px solid transparent;
+    transform: rotate(60deg);
+}

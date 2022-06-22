@@ -17,6 +17,10 @@ const Blog = lazy(() => import("./page/Blog"));
 const BlogDetails = lazy(() => import("./page/BlogDetails"));
 const Terms = lazy(() => import("./page/Terms"));
 const NotFound = lazy(() => import("./components/NotFound"));
+const Counsellors = lazy(() => import("./page/Counsellors"));
+const CounsellorDetail = lazy(() => import("./components/common/SingleCounsellor"));
+const Gallery = lazy(() => import("./components/common/Gallery"));
+const Talk = lazy(() => import("./components/Chat"));
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -29,6 +33,10 @@ export const App = () => (
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<BlogDetails />} />
           <Route path="terms-and-policies" element={<Terms />} />
+          <Route path="counsellors" element={<Counsellors />} />
+          <Route path="counsellors/:id" element={<CounsellorDetail />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="talk" element={<Talk />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -130,7 +130,7 @@ const Footer = () => {
             as={Router}
             color="accent"
             fontSize={["md", "md", "sm", "md"]}
-            to="/terms"
+            to="terms-and-policies"
             _hover={{
               textDecoration: "none",
             }}
@@ -141,7 +141,7 @@ const Footer = () => {
             as={Router}
             color="accent"
             fontSize={["md", "md", "sm", "md"]}
-            to="/contact"
+            to="terms-and-policies"
             _hover={{
               textDecoration: "none",
             }}
